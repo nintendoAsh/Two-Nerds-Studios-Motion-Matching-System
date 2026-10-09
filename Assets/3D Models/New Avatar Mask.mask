@@ -1,0 +1,679 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Avatar Mask
+  m_Mask: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: body.001
+    m_Weight: 1
+  - m_Path: Human Form
+    m_Weight: 1
+  - m_Path: Human Form/spine
+    m_Weight: 1
+  - m_Path: Human Form/spine/pelvis.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/pelvis.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/breast.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/breast.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L/DEF-brow.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L/DEF-cheek.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.001/DEF-brow.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.002/DEF-brow.T.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.L.003/DEF-brow.T.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R/DEF-brow.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R/DEF-cheek.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.001/DEF-brow.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.002/DEF-brow.T.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/brow.T.R.003/DEF-brow.T.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-forehead.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-temple.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/DEF-temple.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/DEF-ear.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/DEF-ear.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.002/DEF-ear.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.003/DEF-ear.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.L/ear.L.004/DEF-ear.L.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/DEF-ear.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/DEF-ear.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.002/DEF-ear.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.003/DEF-ear.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/ear.R/ear.R.004/DEF-ear.R.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw.L/DEF-jaw.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw.R/DEF-jaw.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin/chin.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin/chin.001/DEF-chin.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin/DEF-chin
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin.L/DEF-chin.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/chin.R/DEF-chin.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw/DEF-jaw
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw.L.001/DEF-jaw.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/jaw.R.001/DEF-jaw.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.001/tongue.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.001/tongue.001/DEF-tongue.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.002/tongue.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/MCH-tongue.002/tongue.002/DEF-tongue.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/tongue_master
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/tongue_master/tongue
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/jaw_master/tongue_master/tongue/DEF-tongue
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L/DEF-brow.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.001/DEF-brow.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.002/DEF-brow.B.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/brow.B.L.003/DEF-brow.B.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L/DEF-lid.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.001/DEF-lid.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.002/DEF-lid.B.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.B.L.003/DEF-lid.B.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L/DEF-lid.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.001/DEF-lid.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.002/DEF-lid.T.L.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.L/MCH-lid.T.L.003/DEF-lid.T.L.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R/DEF-brow.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.001/DEF-brow.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.002/DEF-brow.B.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/brow.B.R.003/DEF-brow.B.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R/DEF-lid.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.001/DEF-lid.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.002/DEF-lid.B.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.B.R.003/DEF-lid.B.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R/DEF-lid.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.001/DEF-lid.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.002/DEF-lid.T.R.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/master_eye.R/MCH-lid.T.R.003/DEF-lid.T.R.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master/lip.B
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master/lip.B/DEF-lip.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master/lip.B/DEF-lip.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.001/lip.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.001/lip.B.L.001/DEF-lip.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.001/lip.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.001/lip.B.R.001/DEF-lip.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/cheek.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/cheek.B.L.001/DEF-cheek.B.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/cheek.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/cheek.B.R.001/DEF-cheek.B.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/lips.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/lips.L/DEF-cheek.B.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/lips.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.002/lips.R/DEF-cheek.B.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T/DEF-lip.T.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T/DEF-lip.T.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T.L.001/DEF-lip.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.003/lip.T.R.001/DEF-lip.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/cheek.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/cheek.T.L.001/DEF-cheek.T.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/cheek.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/cheek.T.R.001/DEF-cheek.T.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002/DEF-nose.002
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.001/DEF-nose.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.003/DEF-nose.003
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.004/DEF-nose.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.L.001/DEF-nose.L.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/MCH-jaw_master.004/nose_master/nose.R.001/DEF-nose.R.001
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose/DEF-nose
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose.L/DEF-nose.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/Human
+      form Rig.001/ORG-face/nose.R/DEF-nose.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/tail.004
+    m_Weight: 1
+  - m_Path: Human Form/spine/tail.004/tail.005
+    m_Weight: 1
+  - m_Path: Human Form/spine/tail.004/tail.005/tail.006
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.L/shin.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.L/shin.L/foot.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.L/shin.L/foot.L/heel.02.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.L/shin.L/foot.L/toe.L
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.R/shin.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.R/shin.R/foot.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.R/shin.R/foot.R/heel.02.R
+    m_Weight: 1
+  - m_Path: Human Form/spine/thigh.R/shin.R/foot.R/toe.R
+    m_Weight: 1
