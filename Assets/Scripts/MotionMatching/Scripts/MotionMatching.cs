@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Animations;
 using System.Collections.Generic;
+using TMPro;
 
 public class MotionMatching : MonoBehaviour
 {
@@ -50,6 +51,25 @@ public class MotionMatching : MonoBehaviour
                 bool IsSearching = false;
                 public float ChangeThreshold = 1f;
                 public float ClipChangePenalty = 0f;
+
+                public TMP_Text TimeSinceLastSearchText;
+                public TMP_Text TimeSinceLastMatchText;
+                public TMP_Text CurrentFrameCost;
+                public TMP_Text LastMatchedFrameText;
+                public TMP_Text LastMatchCostText;
+                public TMP_Text AnimationIDText;
+
+
+                public TMP_Text TrejectoryCostText;
+                public TMP_Text RootRotCostText;
+                public TMP_Text BonePosCostText;
+                public TMP_Text BoneRotCostText;
+                public TMP_Text BoneVolCostText;
+
+                public TMP_Text TimePerSearch;
+                public TMP_Text CurrentBestFrame;
+
+                float TimeSinceLastMatch = 0f; //DEBUG DISABLE FOR NORMAL USE
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -115,6 +135,7 @@ public class MotionMatching : MonoBehaviour
             {
                 BestCost = TotalCost;
                 BestFrame = i;
+                CurrentBestFrame.text = BestFrame.ToString();
                 //Debug.Log("BEST FRAME CHANGED: " + BestFrame + "Trejectory: " + TrejectoryCost + " RotationCost: " + RotationCost + " BonePositionCost: " + BonePositionCost + " Bone Velocity Cost: " + BoneVelocityCost + " Total: " + BestCost);
 
                 TrejectoryCostTemp = TrejectoryCost;
@@ -132,13 +153,18 @@ public class MotionMatching : MonoBehaviour
     void Update()
     {
         deltaTimeAdd += Time.deltaTime;
+        TimeSinceLastMatchText.text = (deltaTimeAdd + TimeSinceLastMatch).ToString("0.###");
+        CurrentFrameCost.text = CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)).ToString("0.###");
 
         if(deltaTimeAdd >= TimeBetweenSerches)
         {
+            TimeSinceLastSearchText.text = deltaTimeAdd.ToString("0.###"); //DEBUG DISABLE FOR NORMAL USE
+
             BestCost = float.PositiveInfinity;
             BestFrame = -1;
             IsSearching = true;
-          
+          System.Diagnostics.Stopwatch stopWatch = new System.Diagnostics.Stopwatch();
+          stopWatch.Start();
             for(int i = 0; i < MMData.Frames.Count; i++)
             {
                 float TotalCost = CalculateCost(i);
@@ -146,16 +172,26 @@ public class MotionMatching : MonoBehaviour
                 if(i == MMData.Frames.Count-1)
                 {
                     IsSearching = false;
+                    TrejectoryCostText.text = TrejectoryCostTemp.ToString("0.###");
+                    RootRotCostText.text = RotCostTemp.ToString("0.###");
+                    BonePosCostText.text = BonePosCostTemp.ToString("0.###");
+                    BoneRotCostText.text = BoneRotCostTemp.ToString("0.###");
+                    BoneVolCostText.text = BoneVolCostTemp.ToString("0.###");
                     Debug.Log("BEST FRAME Set: " + BestFrame + "Trejectory: " + TrejectoryCostTemp + " RotationCost: " + RotCostTemp + " BonePositionCost: " + BonePosCostTemp + " Bone Rotation Cost: " + BoneRotCostTemp + " Bone Velocity Cost: " + BoneVolCostTemp + " Total: " + BestCost);
                 }
                 
             }
+            stopWatch.Stop();
+            TimePerSearch.text = (stopWatch.Elapsed).ToString();
+
 
             Debug.Log("Current Cost" + CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) + " Frame: " + (int)Mathf.Round((int)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate) + " FrameRate: " + Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate + " Time: " + AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime());
 
             if(BestFrame != LastMatchedFrame && BestFrame != -1 && CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) > ChangeThreshold)
             {
                 LastMatchedFrame = BestFrame;
+                LastMatchedFrameText.text = BestFrame.ToString();
+                LastMatchCostText.text = BestCost.ToString("0.###");
                 frame = BestFrame;
                 int AnimationID = MMData.Frames[BestFrame].AnimationClipNumber;
                 if(LastMatchedAnimationClip != AnimationID)
@@ -165,6 +201,7 @@ public class MotionMatching : MonoBehaviour
                     //Debug.Log("last animation clip was  not the same");
                 }
                 LastMatchedAnimationClip = AnimationID;
+                AnimationIDText.text = AnimationID.ToString();
                 int AnimationGlobalFrame=0;
                 for(int j = 1; j < AnimationID; j++)//subtracts one by starting with one so only looks at frames before current animation to isolate current animation/frame 
                 {
@@ -177,11 +214,13 @@ public class MotionMatching : MonoBehaviour
                 AnimationPlayables[AnimationID].SetTime((BestFrame - AnimationGlobalFrame)/Clips[AnimationID].frameRate);//set the corect frame to be played
                 graph.Evaluate();
                 //graph.Play();//plays the animation starting from that frame
+                TimeSinceLastMatch = 0f;
             }
             else
             {
                 graph.Play();
                 Debug.LogWarning("Last Selection was Last selected Frame or current frame was good enough");
+                TimeSinceLastMatch = deltaTimeAdd;
             }
 
             for(int i = 0; i < Bones.Count; i++)

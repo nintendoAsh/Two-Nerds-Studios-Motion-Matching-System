@@ -63,69 +63,103 @@ public class MotionMatchingDemoController : MonoBehaviour
         motionMatching = Player.GetComponent<MotionMatching>();
         playerMixedMotionMatching = Player.GetComponent<PlayerMixedMotionMatching>();
 
-        SpeedForwardSlider.value = playerMovement.HumanFormRunSpeedForward;
+        SpeedForwardSlider.value = playerMovement.MoveSpeedFowardDebug;
+        SpeedForwardsText.text = playerMovement.MoveSpeedFowardDebug.ToString("0.###");
+
+        TimeBetweenSearchesSlider.value = motionMatching.TimeBetweenSerches;
+        TimeBetweenSearchesText.text = motionMatching.TimeBetweenSerches.ToString("0.###");
+
+        TrejectoryWeightSlider.value = motionMatching.FutureTrejectoryWeight;
+        TrejectoryWeightText.text = motionMatching.FutureTrejectoryWeight.ToString("0.###");    
+
+        RootRotationWeightSlider.value = motionMatching.RotationWeight;
+        RootRotationWeightText.text = motionMatching.RotationWeight.ToString("0.###");    
+
+        DistanceRequirementSlider.value = motionMatching.FarFrame;
+        DistanceRequirementText.text = motionMatching.FarFrame.ToString("0.###");
+
+        ChangeThrethholdSlider.value = motionMatching.ChangeThreshold;
+        ChangeThrethholdText.text = motionMatching.ChangeThreshold.ToString("0.###");
+
+        ClipChangePenitlySlider.value = motionMatching.ClipChangePenalty;
+        ClipChangePenitlyText.text = motionMatching.ClipChangePenalty.ToString("0.###");    
+
+        TrejectoryHalfLifeSlider.value = playerMixedMotionMatching.TrejectoryHalfLife;
+        TrejectoryHalfLifeText.text = playerMixedMotionMatching.TrejectoryHalfLife.ToString("0.###");    
+
+        TrejectoryReponcivenessSlider.value = playerMixedMotionMatching.Responsiveness;
+        TrejectoryReponcivenessText.text = playerMixedMotionMatching.Responsiveness.ToString("0.###");
+
+        BonePositionWeightSlider.value = motionMatching.Bones[0].BonePositionWeight;
+        BonePositionWeightsText.text = motionMatching.Bones[0].BonePositionWeight.ToString("0.###");
+
+        BoneVelocityWeightSlider.value = motionMatching.Bones[0].BoneVelocityWeight;
+        BoneVelocityWeightText.text = motionMatching.Bones[0].BoneVelocityWeight.ToString("0.###");    
+
+        BoneRotationWeightSlider.value = motionMatching.Bones[0].BoneRotationWeight;
+        BoneRotationWeightText.text = motionMatching.Bones[0].BoneRotationWeight.ToString("0.###");    
     }
     public void SpeedForward(float PlayerSpeedForward)
     {
-        playerMovement.HumanFormRunSpeedForward = PlayerSpeedForward;
-        playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        SpeedForwardsText.text = PlayerSpeedForward.ToString();
+        playerMovement.MoveSpeedFowardDebug = PlayerSpeedForward;
+        //playerMovement.LastForm = PlayerMovement.Form.Neutral;
+        SpeedForwardsText.text = PlayerSpeedForward.ToString("0.###");
     }
 
     public void TimeBetweenSearches(float TimeBetweenSearchesAmount)
     {
         motionMatching.TimeBetweenSerches = TimeBetweenSearchesAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        TimeBetweenSearchesText.text = TimeBetweenSearchesAmount.ToString();
+        TimeBetweenSearchesText.text = TimeBetweenSearchesAmount.ToString("0.###");
     }
 
     public void TrejectoryWeight(float TrejectoryWeightAmount)
     {
         motionMatching.FutureTrejectoryWeight = TrejectoryWeightAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        TrejectoryWeightText.text = TrejectoryWeightAmount.ToString();
+        TrejectoryWeightText.text = TrejectoryWeightAmount.ToString("0.###");
     }
 
     public void RootRotationWeight(float RootRotationWeightAmount)
     {
         motionMatching.RotationWeight = RootRotationWeightAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        RootRotationWeightText.text = RootRotationWeightAmount.ToString();
+        RootRotationWeightText.text = RootRotationWeightAmount.ToString("0.###");
     }
 
-    public void FarFrame(int FarFrameDistance)
+    public void FarFrame(float FarFrameDistance)
     {
-        motionMatching.FarFrame = FarFrameDistance;
+        motionMatching.FarFrame = (int)FarFrameDistance;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        DistanceRequirementText.text = FarFrameDistance.ToString();
+        DistanceRequirementText.text = FarFrameDistance.ToString("0.###");
     }
 
     public void ChangeThreshold(float ChangeThresholdAmount)
     {
         motionMatching.ChangeThreshold = ChangeThresholdAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        ChangeThrethholdText.text = ChangeThresholdAmount.ToString();
+        ChangeThrethholdText.text = ChangeThresholdAmount.ToString("0.###");
     }
 
     public void ClipChangePenalty(float ClipChangePenaltyAmount)
     {
         motionMatching.ClipChangePenalty = ClipChangePenaltyAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        ClipChangePenitlyText.text = ClipChangePenaltyAmount.ToString();
+        ClipChangePenitlyText.text = ClipChangePenaltyAmount.ToString("0.###");
     }
 
     public void TrejectoryHalfLife(float TrejectoryHalfLifeAmount)
     {
         playerMixedMotionMatching.TrejectoryHalfLife = TrejectoryHalfLifeAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        TrejectoryHalfLifeText.text = TrejectoryHalfLifeAmount.ToString();
+        TrejectoryHalfLifeText.text = TrejectoryHalfLifeAmount.ToString("0.###");
     }
 
     public void TrejectoryReponciveness(float TrejectoryReponcivenessAmount)
     {
         playerMixedMotionMatching.Responsiveness = TrejectoryReponcivenessAmount;
         //playerMovement.LastForm = PlayerMovement.Form.Neutral;
-        TrejectoryReponcivenessText.text = TrejectoryReponcivenessAmount.ToString();
+        TrejectoryReponcivenessText.text = TrejectoryReponcivenessAmount.ToString("0.###");
     }
 
     public void BonePositionWeight(float BonePositionWeightAmount)
@@ -134,7 +168,7 @@ public class MotionMatchingDemoController : MonoBehaviour
         {
             motionMatching.Bones[i].BonePositionWeight = BonePositionWeightAmount;
         }
-        BonePositionWeightsText.text = BonePositionWeightAmount.ToString();
+        BonePositionWeightsText.text = BonePositionWeightAmount.ToString("0.###");
     }
 
     public void BoneVelocityWeight(float BoneVelocityWeightAmount)
@@ -143,7 +177,7 @@ public class MotionMatchingDemoController : MonoBehaviour
         {
             motionMatching.Bones[i].BoneVelocityWeight = BoneVelocityWeightAmount;
         }
-        BoneVelocityWeightText.text = BoneVelocityWeightAmount.ToString();
+        BoneVelocityWeightText.text = BoneVelocityWeightAmount.ToString("0.###");
     }
 
     public void BoneRotationWeight(float BoneRotationWeightAmount)
@@ -152,7 +186,7 @@ public class MotionMatchingDemoController : MonoBehaviour
         {
             motionMatching.Bones[i].BoneRotationWeight = BoneRotationWeightAmount;
         }
-        BoneRotationWeightText.text = BoneRotationWeightAmount.ToString();
+        BoneRotationWeightText.text = BoneRotationWeightAmount.ToString("0.###");
     }
 
     
