@@ -71,6 +71,19 @@ public class MotionMatching : MonoBehaviour
 
                 float TimeSinceLastMatch = 0f; //DEBUG DISABLE FOR NORMAL USE
 
+                List<GameObject> TrejectoryReal = new List<GameObject>();
+                List<GameObject> TrejectoryData = new List<GameObject>();
+
+                List<GameObject> BonesReal = new List<GameObject>();
+                List<GameObject> BoneData = new List<GameObject>();
+
+                public GameObject SpherePrefab;
+
+
+                public GameObject TrejectoryDataParent;
+                public GameObject BoneRealParent;
+                public GameObject BoneDataParent;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -98,6 +111,22 @@ public class MotionMatching : MonoBehaviour
             //Debug.Log("Scale Offset: " + ScaleOffset);
         }
         graph.Play(); 
+
+
+        //DEBUG
+
+        for(int i = 0; i < Bones.Count; i++)
+        {
+            BonesReal.Add(Instantiate(SpherePrefab, BoneRealParent.transform));
+            BoneData.Add(Instantiate(SpherePrefab, BoneDataParent.transform));
+
+            var RendererReal = BonesReal[i].GetComponent<Renderer>();
+            RendererReal.material.SetColor("_BaseColor", Color.yellow);
+
+            var RendererData = BoneData[i].GetComponent<Renderer>();
+            RendererData.material.SetColor("_BaseColor", Color.magenta);
+        }
+
     }
 
     float CalculateCost(int i)
@@ -153,12 +182,12 @@ public class MotionMatching : MonoBehaviour
     void Update()
     {
         deltaTimeAdd += Time.deltaTime;
-        TimeSinceLastMatchText.text = (deltaTimeAdd + TimeSinceLastMatch).ToString("0.###");
+        TimeSinceLastMatchText.text = (deltaTimeAdd + TimeSinceLastMatch).ToString("0.###") + " s";
         CurrentFrameCost.text = CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)).ToString("0.###");
 
         if(deltaTimeAdd >= TimeBetweenSerches)
         {
-            TimeSinceLastSearchText.text = deltaTimeAdd.ToString("0.###"); //DEBUG DISABLE FOR NORMAL USE
+            TimeSinceLastSearchText.text = deltaTimeAdd.ToString("0.###") + " s"; //DEBUG DISABLE FOR NORMAL USE
 
             BestCost = float.PositiveInfinity;
             BestFrame = -1;
@@ -182,7 +211,7 @@ public class MotionMatching : MonoBehaviour
                 
             }
             stopWatch.Stop();
-            TimePerSearch.text = (stopWatch.Elapsed).ToString();
+            TimePerSearch.text = (stopWatch.Elapsed.TotalMilliseconds).ToString("0.###") + " ms";
 
 
             Debug.Log("Current Cost" + CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) + " Frame: " + (int)Mathf.Round((int)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate) + " FrameRate: " + Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate + " Time: " + AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime());
@@ -232,6 +261,29 @@ public class MotionMatching : MonoBehaviour
         }
 
         //Debug.Log(AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate);
+
+
+
+        //DEBUG SHIT
+        for(int i = 0; i < MMData.Bones.Count; i++)
+        {
+            BoneData[i].transform.position = new Vector3(MMData.Frames[frame].BoneData[i].BonePositions.x * ScaleOffset.x, MMData.Frames[frame].BoneData[i].BonePositions.y * ScaleOffset.y, MMData.Frames[frame].BoneData[i].BonePositions.z * ScaleOffset.z) + Root.transform.position;
+            BonesReal[i].transform.position = Bones[i].Bone.transform.position;
+        }
+
+        for(int i = 0; i < MMData.Frames[frame].FutureTrejectoryPositions.Count; i++)
+        {
+            if(TrejectoryData.Count <= i)
+            {
+                TrejectoryData.Add(Instantiate(SpherePrefab, TrejectoryDataParent.transform));
+
+                var Renderer = TrejectoryData[i].GetComponent<Renderer>();
+
+                Renderer.material.SetColor("_BaseColor", Color.blue);
+            }
+
+            TrejectoryData[i].transform.position = new Vector3(MMData.Frames[frame].FutureTrejectoryPositions[i].x * ScaleOffset.x, MMData.Frames[frame].FutureTrejectoryPositions[i].y * ScaleOffset.y, MMData.Frames[frame].FutureTrejectoryPositions[i].z * ScaleOffset.z) + Root.transform.position;
+        }
     }
 
     void OnValidate()

@@ -57,6 +57,21 @@ public class MotionMatchingDemoController : MonoBehaviour
     public Slider BoneVelocityWeightSlider;
     public TMP_Text BoneVelocityWeightText;
 
+    public GameObject Setting;
+    public GameObject MainMenu;
+    public GameObject CameraFront;
+    public GameObject CameraSide;
+    public GameObject CameraAngled;
+    public GameObject ThirdPersonCamera;
+
+
+    public GameObject TrejectoryDataParent;
+    public GameObject BoneRealParent;
+    public GameObject BoneDataParent;
+    public GameObject TrejectoryRealParent;
+
+
+
     void Start()
     {
         playerMovement = Player.GetComponent<PlayerMovement>();
@@ -189,5 +204,68 @@ public class MotionMatchingDemoController : MonoBehaviour
         BoneRotationWeightText.text = BoneRotationWeightAmount.ToString("0.###");
     }
 
-    
+    public void UseCameraFront()
+    {
+        CameraFront.SetActive(true);
+        CameraAngled.SetActive(false);
+        ThirdPersonCamera.SetActive(false);
+        CameraSide.SetActive(false);
+    }
+
+    public void UseCameraAngled()
+    {
+        CameraFront.SetActive(false);
+        CameraAngled.SetActive(true);
+        ThirdPersonCamera.SetActive(false);
+        CameraSide.SetActive(false);
+    }
+
+    public void UseThirdPersonCamera()
+    {
+        CameraFront.SetActive(false);
+        CameraAngled.SetActive(false);
+        ThirdPersonCamera.SetActive(true);
+        CameraSide.SetActive(false);
+    }
+
+    public void UseCameraSide()
+    {
+        CameraFront.SetActive(false);
+        CameraAngled.SetActive(false);
+        ThirdPersonCamera.SetActive(false);
+        CameraSide.SetActive(true);
+    }
+
+    public void ShowSettingMenu()
+    {
+        Setting.SetActive(true);
+        MainMenu.SetActive(false);
+    }
+
+    public void HideSettingsMenu()
+    {
+        Setting.SetActive(false);
+        MainMenu.SetActive(true);
+    }
+
+    public void ShowTrejectoryReal(bool value)
+    {
+        TrejectoryRealParent.SetActive(value);
+    }
+
+    public void ShowTrejectoryData(bool value)
+    {
+        TrejectoryDataParent.SetActive(value);
+    }
+
+    public void ShowBoneReal(bool value)
+    {
+        BoneRealParent.SetActive(value);
+    }
+
+    public void ShowBoneData(bool value)
+    {
+        BoneDataParent.SetActive(value);
+    }
+
 }

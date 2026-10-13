@@ -41,6 +41,10 @@ public class PlayerMixedMotionMatching : MonoBehaviour
      Vector3 LastMovement;
      public float Responsiveness = 0.01f;
 
+     List<GameObject> RealTrejectory = new List<GameObject>();
+     public GameObject SpherePrefab;
+                     public GameObject TrejectoryRealParent;
+
     void Awake()
     {
         for (int i = 0; i < FutureFramesAhead.Count; i++)
@@ -52,6 +56,12 @@ public class PlayerMixedMotionMatching : MonoBehaviour
         {
             PosibleFutureRotations.Add(Vector3.zero);
             Debug.Log(PosibleFutureRotations[j]);
+
+            //DEBUG
+            RealTrejectory.Add(Instantiate(SpherePrefab, TrejectoryRealParent.transform));
+
+            var Renderer = RealTrejectory[j].GetComponent<Renderer>();
+            Renderer.material.SetColor("_BaseColor", Color.green);
         }
     }
 
@@ -138,6 +148,11 @@ public class PlayerMixedMotionMatching : MonoBehaviour
             HumanFormAni.SetBool("IsRunning", false);
         }
         */
+
+        for (int j = 0; j < FutureFramesAhead.Count; j++)
+        {
+            RealTrejectory[j].transform.position = PosibleFuturePositions[j];
+        }
     }
 
     public void DesiredVelocityAndTrejectory(ref Vector3 Postion, ref Vector3 Velocity, ref Vector3 Acceleration, Vector3 VelocityGoal, float HalfLife, float TimeStep = 1, float epsilon = 1e-5f)
