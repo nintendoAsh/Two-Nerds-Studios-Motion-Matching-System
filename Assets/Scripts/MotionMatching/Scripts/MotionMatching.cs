@@ -16,9 +16,9 @@ public class MotionMatching : MonoBehaviour
     float TrejectoryCost;
     float BoneRotationCost;
     public Animator Ani;
-    List<AnimationClip> Clips = new List<AnimationClip>();
+    [HideInInspector] [SerializeField] List<AnimationClip> Clips = new List<AnimationClip>();
     PlayableGraph graph;
-    List<AnimationClipPlayable> AnimationPlayables = new List<AnimationClipPlayable>();
+    [HideInInspector] [SerializeField] List<AnimationClipPlayable> AnimationPlayables = new List<AnimationClipPlayable>();
     public int LastMatchedFrame = 0;
     public GameObject Root;
     public GameObject Scale; //to normalize scale of everything to the corect scale. will multiply postions by this game objects scale value
@@ -68,6 +68,7 @@ public class MotionMatching : MonoBehaviour
 
                 public TMP_Text TimePerSearch;
                 public TMP_Text CurrentBestFrame;
+                public TMP_Text DroppedFramesText;
 
                 float TimeSinceLastMatch = 0f; //DEBUG DISABLE FOR NORMAL USE
 
@@ -83,6 +84,7 @@ public class MotionMatching : MonoBehaviour
                 public GameObject TrejectoryDataParent;
                 public GameObject BoneRealParent;
                 public GameObject BoneDataParent;
+                float DroppedFrames = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -184,6 +186,8 @@ public class MotionMatching : MonoBehaviour
         deltaTimeAdd += Time.deltaTime;
         TimeSinceLastMatchText.text = (deltaTimeAdd + TimeSinceLastMatch).ToString("0.###") + " s";
         CurrentFrameCost.text = CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)).ToString("0.###");
+        //Debug.Log("AnimationPlayables: " + AnimationPlayables.Count);
+        //Debug.Log("Clips: " + Clips.Count);
 
         if(deltaTimeAdd >= TimeBetweenSerches)
         {
@@ -214,7 +218,7 @@ public class MotionMatching : MonoBehaviour
             TimePerSearch.text = (stopWatch.Elapsed.TotalMilliseconds).ToString("0.###") + " ms";
 
 
-            Debug.Log("Current Cost" + CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) + " Frame: " + (int)Mathf.Round((int)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate) + " FrameRate: " + Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate + " Time: " + AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime());
+            //Debug.Log("Current Cost" + CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) + " Frame: " + (int)Mathf.Round((int)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate) + " FrameRate: " + Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate + " Time: " + AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime());
 
             if(BestFrame != LastMatchedFrame && BestFrame != -1 && CalculateCost((int)Mathf.Round((float)AnimationPlayables[MMData.Frames[LastMatchedFrame].AnimationClipNumber].GetTime() * Clips[MMData.Frames[LastMatchedFrame].AnimationClipNumber].frameRate)) > ChangeThreshold)
             {
@@ -250,6 +254,12 @@ public class MotionMatching : MonoBehaviour
                 graph.Play();
                 Debug.LogWarning("Last Selection was Last selected Frame or current frame was good enough");
                 TimeSinceLastMatch = deltaTimeAdd;
+                if(DroppedFrames >= 10000)
+                {
+                    DroppedFrames = 0f;
+                }
+                DroppedFrames++;
+                DroppedFramesText.text = DroppedFrames.ToString();
             }
 
             for(int i = 0; i < Bones.Count; i++)
@@ -294,6 +304,9 @@ public class MotionMatching : MonoBehaviour
             {
                 Bones.Add(new AssignableBone{Name = MMData.Bones[i].BoneName, BoneID = MMData.Bones[i].BoneID});
             }
+            #if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(this);
+            #endif
         }
 
         if(MMData != null && Clips.Count < 1)
@@ -302,6 +315,10 @@ public class MotionMatching : MonoBehaviour
             {
                 Clips.Add(MMData.AnimationClips[i].Clip);
             }
+
+            #if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(this);
+            #endif
         }
     }
 
@@ -309,6 +326,12 @@ public class MotionMatching : MonoBehaviour
     {
         // Destroys all Playables and PlayableOutputs created by the graph.
         graph.Destroy();
+    }
+
+    public void ResetDroppedFramesCount()
+    {
+        DroppedFrames = 0f;
+        Debug.Log("DroppedFramesReset");
     }
 
     void OnDrawGizmos()
