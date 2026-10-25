@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/MotionMatching/Editor/MotionMatchingDataSetEditor.uss?fileID=7433441132597879392&amp;guid=a55216632d86bf84ba658fd381c38be9&amp;type=3#MotionMatchingDataSetEditor" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Animation Clips:" style="-unity-text-align: upper-left;" />
+        <ui:ListView show-border="true" show-add-remove-footer="true" reorderable="true" data-source-type="UnityEngine.AnimationClip, UnityEngine.AnimationModule" name="AnimationList" show-foldout-header="true" virtualization-method="DynamicHeight" />
+        <ui:Label text="FrameTotal: 0" name="FrameAmount" style="-unity-text-align: upper-right;" />
+        <ui:Label text="Future Trejectory Points:" />
+        <ui:ListView name="FutureTrejectorys" show-add-remove-footer="true" show-border="true" reorderable="false" show-foldout-header="true" data-source-type="UnityEditor.ShaderGraph.Drawing.FloatField, Unity.ShaderGraph.Editor" virtualization-method="DynamicHeight" />
+        <ui:VisualElement name="RigSource" style="flex-grow: 1; align-items: auto;" />
+        <ui:Label text="Bones to match:" />
+        <ui:ListView reorderable="true" show-border="true" show-add-remove-footer="true" tooltip="if you want to have the matcher keep bones in mind add them here" name="BoneList" data-source-type="BoneObjectsAndSettings, Assembly-CSharp-Editor" show-foldout-header="true" virtualization-method="DynamicHeight" fixed-item-height="60" />
+        <ui:Button text="BAKE!" tooltip="Press when you are ready to make the dataset into a scriptable object" enabled="true" name="BakeButton" />
+    </ui:VisualElement>
+</ui:UXML>
