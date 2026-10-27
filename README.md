@@ -24,4 +24,22 @@ There are two main parts that make up motion matching.
 2. The Matcher. Useing the dataset that was created the matcher uses a perdicted trejectory based on player speed, current velocity and input as well as the players current limb postions, rotations and velocitys in game to search for the best frame to play.
 With those two systems motion matching (should) deliver some of the best and most realistic animation posible
 
+## How The Two Nerds Studios Motion Matching System Works
 
+The Two Nerds Studios Motion Matching System is made up of several parts and scripts knowing what they do will hopefuly help you to use it
+
+Lock Root Motion - Locked postional root motion so the animated chaercter doesnt walk away from the root. but unlike disabling root motion in the animator this script still allows root rotation
+
+Motion Matcher Dataset Debugger - Displays all of the data contained in the dataset scriptable object visualiy
+
+Motion Matching - The heart of the system. this script takes in the perdicted future trejectory along with bone postions, roations, and velocities and matches to the frame with the lowest cost value (best frame)
+
+Player Mixed Motion Matching - THIS SCRIPT NAME IS WRONG! ITS NOT THE MATCHER ITS THE TREJECOTRY GENERATOR
+
+Motion Matching Dataset Editor - The Dataset creator. this script handles all of the UI and baking of the dataset in the dataset editor
+
+Movement Provider - A custom class that has all the verables required for the trejectory genorator (PlayerMixedMotionMatching) to geneorate. 
+
+Data Set - A scriptable Object that holds all of the frames, bone, animation clip and more outputted by the dataset editor
+
+Rigidbody Movement Provider - A middle man script that inherits from MovementProvider that passes along data from the rigidbody to the Trejectory Generator (PlayerMixedMotionMatching)
