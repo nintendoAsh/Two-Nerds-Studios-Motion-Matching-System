@@ -80,7 +80,7 @@ For you More Text based learners here is a basic step by step guide
 
 11. in the script replace the parent class (the : Monobehavoir at the top for your script) with MovementProvider so it should look somthing like public class ScriptName : MovementProvider
 
-12. then you must assine values to PlayerPostion, PlayerVelocity, DesiredVelocity and then define UpdateValues() you dont have to define the verables just make sure you spell the names properly and assine the corect data to them. Most are self explaintory. Player Postion is the players current postion, player velocity is the players current speed/velocity, and Desired Velcotiy is the velocity to wish to reach (normaly done with Speed multiplyed by your input value). write the code for desired velocity in the update fucntion and define UpdateValues by typeing public void override UpdateValues() then put the code to set PlayerPostion and PlayerVelocity in there
+12. then you must assine values to PlayerPostion, PlayerVelocity, DesiredVelocity and then define UpdateValues() you dont have to define the verables just make sure you spell the names properly and assine the corect data to them. Most are self explaintory. Player Postion is the players current postion, player velocity is the players current speed/velocity, and Desired Velcotiy is the velocity to wish to reach (normaly done with Speed multiplyed by your input value). write the code for desired velocity in the update fucntion and define UpdateValues by typeing public override void UpdateValues() then put the code to set PlayerPostion and PlayerVelocity in there
 
 13. in the end it should look simler to this:
 
@@ -113,6 +113,36 @@ public class RigidbodyMovementProvider : MovementProvider
 
 18. on the trejectory generator (PlayerMixedMotionMatching) under the Future Frames Ahead list (NOT THE POSIBLE FUTURE POSTIONS LIST) add the same data that you entered into the Dataset Future Trejectory points list.
 
-19. weight all of your fetaures (the weights are not normaized so some data nateraly impacts the cost more then normal such as velocitys)
+19. weight all of your fetaures (the weights are not normaized so some data nateraly impacts the cost more then normal such as velocitys this makes it a bit of a pain to tune the system into working)
 
 20. enjoy
+
+## Feature weights and Settings
+
+### Motion Matching Script
+
+Time Bettwen Searches - minium time elapsed bettwen each search for a new match
+
+Future trejectory weight - how much the future trejectory infulences the cost value (depending on the amount of postion features you are matching this will nataeraly have higher infuence)
+
+Rotation Weight - how much the Current Root roation infuences the cost value
+
+Bone Postion Weight - how much the Current Bone postion infuences the cost value
+
+Bone Rotation Weight - how much the Current Bone roation infuences the cost value
+
+Bone Velocity Weight - how much the current bone velocity infuences the cost value
+
+Far Frame - How far away in the dataset from the last match does a frame have to be to be matched to
+
+Velocity Mutiplyer - multiplys the velocity that the matcher sees from the runtime. (was for development unneeded now)
+
+Change Threathold - How high does the current frames cost have to be to match. if the current frame is lower then that cost keep playing curent animation. (is disabled in the package)
+
+Clip Change Penitly - if the matcher is serching for a frame and the current frame its looking at is not from the same animation clip that is currently playing add this value to current cost so to discorge it from changing clips
+
+### Tregetory Genorator (PlayerMixedMotionMatching)
+
+Future Frames Ahead - works the same to Future Trejecotry Points in the dataset editor. add the points in times you want to sample/ perdict the future trejectory. (MUST BE SET THE SAME AS THE FUTURE TREJECTORY POINT YOU SET IN THE CURRENT DATASET DURING BAKING)
+
+Trejectory Half-life - the rate at which the trejectory decays
