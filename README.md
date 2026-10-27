@@ -24,7 +24,7 @@ There are two main parts that make up motion matching.
 2. The Matcher. Useing the dataset that was created the matcher uses a perdicted trejectory based on player speed, current velocity and input as well as the players current limb postions, rotations and velocitys in game to search for the best frame to play.
 With those two systems motion matching (should) deliver some of the best and most realistic animation posible
 
-## How The Two Nerds Studios Motion Matching System Works
+## What Scripts do what
 
 The Two Nerds Studios Motion Matching System is made up of several parts and scripts knowing what they do will hopefuly help you to use it
 
@@ -43,3 +43,29 @@ Movement Provider - A custom class that has all the verables required for the tr
 Data Set - A scriptable Object that holds all of the frames, bone, animation clip and more outputted by the dataset editor
 
 Rigidbody Movement Provider - A middle man script that inherits from MovementProvider that passes along data from the rigidbody to the Trejectory Generator (PlayerMixedMotionMatching)
+
+## How to use the Two Nerds Studios Motion Matching System
+
+We have uploaded a video on our youtube channel showing you how to set up and use the Two Nerds Studios Motion Matching System. it is a little bit scuffed but it works: https://youtu.be/EjWfd_qJaKc?si=9hmlMTV1CmTH9x1N
+
+For you More Text based learners here is a basic step by step guide
+
+1. Import the Two Nerds Studios Motion Matching System into unity
+
+2. get a dance card or a locomotion animation clip and a charecter that the animation can play on. both must have and suport root motion
+
+3. make sure the charecter and animation clip share the same avatar in unity (require for root motion)
+
+4. open the dataset editor by going to the top menu bar of unity and looking for the dropdown labled Two Nerds Studios. hover your mouse over it and click Motion Matching Dataset Editor
+
+5. in the window that opens up add the animation clips that you want to bake into the list labled Animation Clips.
+
+6. in the same window under Future Trejectory Points add as many points in time you want the trejecory to be sampled as you want just make sure you remeber how many you added and the seconds value for each one
+
+7. if you havent already add your 3D model into your scene.
+
+8. on the Game Object with the 3D models animator make sure you have your 3D models avatar assinged in the box labled avatar and add the lock Root Motion script to the game object
+
+9. on the main game object for your player/3D model add the Motion Matchin script and the Player Mixed Motion Matching Script (trejectory generator)
+
+10. 
