@@ -68,4 +68,27 @@ For you More Text based learners here is a basic step by step guide
 
 9. on the main game object for your player/3D model add the Motion Matchin script and the Player Mixed Motion Matching Script (trejectory generator)
 
-10. 
+10. create a script. this will be your movement provider feel free to name it whatever you want in my case my movement is provided / is controlled by a rigidbody so I'm gonna named it RigidbodyMovementProvider
+
+11. in the script replace the parent class (the : Monobehavoir at the top for your script) with MovementProvider so it should look somthing like public class ScriptName : MovementProvider
+
+12. then you must assine values to PlayerPostion, PlayerVelocity, DesiredVelocity and then define UpdateValues() you dont have to define the verables just make sure you spell the names properly and assine the corect data to them. Most are self explaintory. Player Postion is the players current postion, player velocity is the players current speed/velocity, and Desired Velcotiy is the velocity to wish to reach (normaly done with Speed multiplyed by your input value). write the code for desired velocity in the update fucntion and define UpdateValues by typeing public void override UpdateValues() then put the code to set PlayerPostion and PlayerVelocity in there
+
+13. in the end it should look simler to this: ```csharp 
+using UnityEngine;
+
+public class RigidbodyMovementProvider : MovementProvider
+{
+    public Rigidbody rigidbody;
+    public Movement movement;
+    void Update()
+    {
+        DesiredVelocity = new Vector3(movement.speed * movement.MoveX, 0f, movement.speed * movement.MoveZ);
+    }
+
+    public override void UpdateValues()
+    {
+        PlayerPostion = rigidbody.position;
+        PlayerVelocity = rigidbody.linearVelocity;
+    }
+}
