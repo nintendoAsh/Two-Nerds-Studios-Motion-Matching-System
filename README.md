@@ -95,3 +95,16 @@ public class RigidbodyMovementProvider : MovementProvider
     }
 }
 ```
+14. return to unity and asigne the new movement provider to the same Game Object with the rest of the scripts and then fufill its required refrences 
+
+15. assine the new Movement provider to the Trejecotry generator (PlayerMixedMotionMatching) 
+
+16. asgine the dataset to the motion matching script. along with the Trejectory maker (PlayerMixedMotionMatching) and the animator of you 3D model. asgine the root and and scale game Obects (MAKE SURE YOU SELECT THE RIGHT ONES. Root is the root bone of your 3D model but for me I always have trouble becusae it keeps changing becuase my models are BAD. Scale is if your 3D model is scaled up or down diffrently from the way it was added to the scene (if the Model was scaled weirdly when added to the scene then the data was created with the scale so there is no need to rescale it but still add the refrence so the code doesnt compleatly freak out))
+
+17. under the bones list asgine the game object for each bone
+
+18. on the trejectory generator (PlayerMixedMotionMatching) under the Future Frames Ahead list (NOT THE POSIBLE FUTURE POSTIONS LIST) add the same data that you entered into the Dataset Future Trejectory points list.
+
+19. weight all of your fetaures (the weights are not normaized so some data nateraly impacts the cost more then normal such as velocitys)
+
+20. enjoy
