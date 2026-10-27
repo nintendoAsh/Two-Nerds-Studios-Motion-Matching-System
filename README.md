@@ -74,7 +74,9 @@ For you More Text based learners here is a basic step by step guide
 
 12. then you must assine values to PlayerPostion, PlayerVelocity, DesiredVelocity and then define UpdateValues() you dont have to define the verables just make sure you spell the names properly and assine the corect data to them. Most are self explaintory. Player Postion is the players current postion, player velocity is the players current speed/velocity, and Desired Velcotiy is the velocity to wish to reach (normaly done with Speed multiplyed by your input value). write the code for desired velocity in the update fucntion and define UpdateValues by typeing public void override UpdateValues() then put the code to set PlayerPostion and PlayerVelocity in there
 
-13. in the end it should look simler to this: ```csharp 
+13. in the end it should look simler to this:
+
+```csharp 
 using UnityEngine;
 
 public class RigidbodyMovementProvider : MovementProvider
@@ -92,3 +94,4 @@ public class RigidbodyMovementProvider : MovementProvider
         PlayerVelocity = rigidbody.linearVelocity;
     }
 }
+```
