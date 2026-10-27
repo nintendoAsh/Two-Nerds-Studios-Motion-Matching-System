@@ -5,7 +5,15 @@ Hello and welcome to the Two Nerds Studios Motion Matching Github page. I'm Ash 
 
 ## Table Of Content
 
-[What Is Motion Matching](#what-is-motion-matching)
+- [Disclaimer](#disclaimer)
+- [Why Did I Make This?](#why-did-i-make-this)
+- [What Is Motion Matching?](#what-is-motion-matching)
+- [What Scripts Do What?](#what-scripts-do-what)
+- [How to Use the System](#how-to-use-the-two-nerds-studios-motion-matching-system)
+- [Feature Weights and Settings](#feature-weights-and-settings)
+- [Limitations and TODO](#limitations-and-todo)
+- [Credits and Assets](#credits-and-assets)
+- [Related Projects](#related-projects)
 
 ## Disclamer
 THIS IS NOT PRODUCTION READY!!! 
