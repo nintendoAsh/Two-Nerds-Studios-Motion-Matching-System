@@ -143,11 +143,11 @@ Clip Change Penalty - if the matcher is searching for a frame and the current fr
 
 ### Trajectory Generator (PlayerMixedMotionMatching)
 
-Future Frames Ahead - works the same as Future Trajectory Points in the dataset editor. Add the points in times you want to sample/ perdict the future trajectory. (MUST BE SET THE SAME AS THE FUTURE TRAJECTORY POINT YOU SET IN THE CURRENT DATASET DURING BAKING)
+Future Frames Ahead - works the same as Future Trajectory Points in the dataset editor. Add the points in times you want to sample/predict  the future trajectory. (MUST BE SET THE SAME AS THE FUTURE TRAJECTORY POINT YOU SET IN THE CURRENT DATASET DURING BAKING)
 
 Trajectory Half-life - Control how fast the predicted trajectory's movement converges into the desired velocity (It's just fancy… VERY FANCY blending). A higher half-life will cause it to feel less responsive but more weighty and sometimes more realistic, but a lower half-life will make it snappy and responsive, with the trade-off of being lighter and less realistic.
 
-Responsiveness - set this to higher than your movement speed. It was to add blending to your desired velocity but I quickly realized its actualy not doing that and screwing everything up. So set it to like a stupid high number and leave it. It will be gone in the next update.
+Responsiveness - set this to higher than your movement speed. It was to add blending to your desired velocity but I quickly realized its actually not doing that and screwing everything up. So set it to like a stupid high number and leave it. It will be gone in the next update.
 
 ## Limitations and TODO
 
@@ -162,6 +162,7 @@ Todo:
 * Rename the PlayerMixedMotionMatching script to the TrajectoryGenerator.
 * Remove the responsiveness slider and other unneeded functions.
 * Rework the Cost Threshold.
+* Add weight normalization 
 
 Limitations:
 
