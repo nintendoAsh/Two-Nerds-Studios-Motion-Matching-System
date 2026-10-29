@@ -206,10 +206,12 @@ If you made it this far, I would like to thank you too. It took me forever to ma
 
 If you have any issues with this software, add it to the issues tab on GitHub!
 
+The versions are named after Tragically Hip albums for all you Canadians out there! 
+
 
 
 Once again, thanks for going all the way to the bottom. I would like to now share my favourite quote so far:
 
-“Find what you are willing to die for and live for it”
+- “Find what you are willing to die for and live for it”
 
-“The two most important days of your life are the day you were born, and the day you find out why”
+- “The two most important days of your life are the day you were born, and the day you find out why”
