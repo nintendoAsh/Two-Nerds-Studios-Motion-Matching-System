@@ -7,7 +7,9 @@ Hello and welcome to the Two Nerds Studios Motion Matching Github page. I'm Ash 
 
 - [Disclaimer](#disclaimer)
 - [Why Did I Make This?](#why-did-i-make-this)
+- [Features](#Features)
 - [What Is Motion Matching?](#what-is-motion-matching)
+- [Why Use Motion Matching](#Why-Use-Motion-Matching-Over-Traditional-State-Matchines)
 - [What Scripts Do What?](#what-scripts-do-what)
 - [How to Use the System](#how-to-use-the-two-nerds-studios-motion-matching-system)
 - [Feature Weights and Settings](#feature-weights-and-settings)
@@ -23,6 +25,14 @@ Sorry
 
 I am an overscoping lil game dev and decided I needed the best-looking animation for a little prototype of a game I was making. It very quickly spiralled out of control into the biggest and most complex programming project I have ever done so far.
 
+## Features
+
+- Can Match to Trajectories
+- Can match to Game Object Postions, Rotations, and velocities
+- everything can be individually weighted
+- only requires writing one basic script to use
+- Debug gizmos
+
 ## What Is Motion Matching
 
 Simply, Motion Matching does what the name says. It matches the motion.
@@ -31,6 +41,11 @@ There are two main parts that make up motion matching.
 1. The Dataset. Motion matching doesn't create new animation frames; it simply uses what you give it. You must provide it with one or more animation clips demonstrating different types of movement. Using those animation clips, a program takes each frame, finds a future trajectory as well as the bone positions relative to the root bone and things like velocity and rotation. All of the data that the program finds is stored in some sort of dataset (in our case, a ScriptableObject) that the matcher can look through
 2. The Matcher. Using the dataset that was created, the matcher uses a predicted trajectory based on player speed, current velocity and input, as well as the player's current limb positions, rotations and velocities in-game to search for the best frame to play.
 With those two systems, motion matching (should) deliver some of the best and most realistic animation possible.
+
+## Why Use Motion Matching Over Traditional State Matchines
+
+In traditional state machine animations, when you want to change or add a movement (locomotion-wise), you have to rearrange things, add LOTS of transitions, or reprogram parts. But with motion matching, you simply add it to the dataset and, bata bing bata boom, that's basically it aside from adding tags or stuff. It also fixes getting stuck on undefined transitions. Have you ever had a player do something so crazy your state machine freaks out and just continues playing the walking animation even when standing still (or any animation, for that matter)? I certainly have! Since there are no transitions, it literally can’t get stuck, so say goodbye to those too.
+
 
 ## What Scripts do what
 
